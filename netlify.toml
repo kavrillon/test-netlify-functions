@@ -7,10 +7,12 @@
   from = "/a"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "SLUG-A"}
+  force = true
+  headers = {X-From = "SLUG-A", X-Custom-Token = "my custom token"}
 
 [[redirects]]
   from = "/b"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "SLUG-B"}
+  force = true
+  headers = {X-From = "SLUG-B", X-Custom-Token = "my custom token"}

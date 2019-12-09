@@ -11,9 +11,13 @@ const getData = async from => {
 
 exports.handler = async event => {
   const from = event.headers['x-from'];
+  console.log('TCL: from', from);
   const upperfrom = event.headers['X-From'];
-  console.log('FROM: ', from);
-  console.log('UPPERFROM: ', upperfrom);
+  console.log('TCL: upperfrom', upperfrom);
+  const custom = event.headers['x-custom-token'];
+  console.log('TCL: custom', custom);
+  const uppercustom = event.headers['X-Custom-Token'];
+  console.log('TCL: uppercustom', uppercustom);
 
   const result = await getData(from);
 
