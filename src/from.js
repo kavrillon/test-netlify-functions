@@ -19,11 +19,15 @@ exports.handler = async event => {
 
   return {
     statusCode: 200,
+    headers: {
+      'Content-Type': 'text/html'
+    },
     body: `<ul>
+      <li>Requested data: ${result.id}</li>
       <li>from: ${from}</li>
       <li>upperfrom: ${upperfrom}</li>
       <li>custom: ${custom}</li>
-      <li>: ${uppercustom}</li>
+      <li>uppercustom: ${uppercustom}</li>
     </ul>`
   };
 };
