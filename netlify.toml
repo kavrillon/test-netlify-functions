@@ -1,0 +1,15 @@
+[build] 
+  command = "yarn build"
+  functions = ".functions"
+
+[[redirects]]
+  from = "/domaina"
+  to = "/.netlify/functions/test"
+  status = 200
+  headers = {X-From = "https://domaina.example.com"}
+
+[[redirects]]
+  from = "/domaino"
+  to = "/.netlify/functions/test"
+  status = 200
+  headers = {X-From = "https://domaino.example.com"}

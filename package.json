@@ -1,0 +1,14 @@
+{
+  "name": "test-netlify-functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kavrillon/test-netlify-functions.git",
+  "author": "<kevin@avrillon.me>",
+  "license": "MIT",
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  },
+  "scripts": {
+    "build": "netlify-lambda build src"
+  }
+}
