@@ -11,7 +11,9 @@ const getData = async from => {
 
 exports.handler = async event => {
   const from = event.headers['x-from'];
+  const upperfrom = event.headers['X-From'];
   console.log('FROM: ', from);
+  console.log('UPPERFROM: ', upperfrom);
 
   const result = await getData(from);
 
