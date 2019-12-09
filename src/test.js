@@ -1,17 +1,9 @@
-const getResponse = myxml => ({
-  statusCode: 200,
-  headers: {
-    'Content-Type': 'text/xml'
-  },
-  body: myxml
-});
-
-const getClient = async url => {
+const getData = async from => {
   return new Promise(resolve => {
     setTimeout(() => {
       resolve({
         id: 1,
-        url: url
+        slug: from
       });
     }, 1000);
   });
@@ -19,16 +11,12 @@ const getClient = async url => {
 
 exports.handler = async event => {
   const from = event.headers['x-from'];
-  console.log('TCL: FROM: ', from);
-  const client = await getClient(from);
+  console.log('FROM: ', from);
 
-  return getResponse(`<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>${client.url}</loc>
-        <lastmod>2005-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-  </urlset>`);
+  const result = await getData(from);
+
+  return {
+    statusCode: 200,
+    body: 'Requested Slug: ' + result.slug
+  };
 };

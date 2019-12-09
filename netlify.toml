@@ -7,10 +7,10 @@
   from = "/a"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "https://a.example.com"}
+  headers = {X-From = "SLUG-A"}
 
 [[redirects]]
   from = "/b"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "https://b.example.com"}
+  headers = {X-From = "SLUG-B"}
