@@ -4,13 +4,13 @@
   functions = ".functions"
 
 [[redirects]]
-  from = "/domaina"
+  from = "/a"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "https://domaina.example.com"}
+  headers = {X-From = "https://a.example.com"}
 
 [[redirects]]
-  from = "/domaino"
+  from = "/b"
   to = "/.netlify/functions/test"
   status = 200
-  headers = {X-From = "https://domaino.example.com"}
+  headers = {X-From = "https://b.example.com"}
