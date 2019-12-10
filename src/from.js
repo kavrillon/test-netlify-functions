@@ -11,6 +11,7 @@ const getData = async from => {
 
 exports.handler = async event => {
   console.log(event.headers);
+  const referer = event.headers['referer'];
   const from = event.headers['x-from'];
   const upperfrom = event.headers['X-From'];
   const custom = event.headers['x-custom-token'];
@@ -24,6 +25,7 @@ exports.handler = async event => {
       'Content-Type': 'text/html'
     },
     body: `<ul>
+      <li>Referer: ${referer}</li>
       <li>Requested data: ${result.id}</li>
       <li>from: ${from}</li>
       <li>upperfrom: ${upperfrom}</li>
