@@ -5,12 +5,12 @@
 
 [[redirects]]
   from = "/test1"
-  to = "/.netlify/functions/from"
+  to = "/.netlify/functions/slug"
   status = 200
   force = true
 
 [[redirects]]
   from = "/test2"
-  to = "/.netlify/functions/from"
+  to = "/.netlify/functions/slug"
   status = 200
   force = true
