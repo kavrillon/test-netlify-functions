@@ -10,6 +10,7 @@ const getData = async from => {
 };
 
 exports.handler = async event => {
+  console.log(event.headers);
   const from = event.headers['x-from'];
   const upperfrom = event.headers['X-From'];
   const custom = event.headers['x-custom-token'];

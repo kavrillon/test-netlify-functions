@@ -1,7 +1,7 @@
 {
   "name": "test-netlify-functions",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:kavrillon/test-netlify-functions.git",
   "author": "<kevin@avrillon.me>",
   "license": "MIT",
