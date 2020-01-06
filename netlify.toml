@@ -5,14 +5,14 @@
 
 [[redirects]]
   from = "/test1"
-  to = ".netlify/functions/slug"
+  to = "/.netlify/functions/slug"
   status = 200
   force = true
   headers = {X-From = "SLUG-TEST-1", X-Netlify-Hostname = "test1.com"}
 
 [[redirects]]
   from = "/test2"
-  to = ".netlify/functions/slug"
+  to = "/.netlify/functions/slug"
   status = 200
   force = true
   headers = {X-From = "SLUG-TEST-2", X-Netlify-Hostname = "test2.com"}
